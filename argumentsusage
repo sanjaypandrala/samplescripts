@@ -1,0 +1,12 @@
+#!/bin/bash
+#
+# simple demo script with arguments
+# run this script with the name of one or more people
+# usage ./argumentsusage   give name of person bob and pete and ggive more arg to chk
+
+
+echo "Hello $1 how are you"
+echo "Hello $2 how are you"
+
+
+exit 0

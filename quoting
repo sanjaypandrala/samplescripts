@@ -1,0 +1,22 @@
+~	home dir
+`	cmd sustitution
+#	comment
+$	variable expressin
+&	background job
+*	wildcard
+(	start subshell
+)	end subshell
+\	quote next char
+|	pipe
+[	start char set wildcard
+]	end char set wildcard
+{	start cmd block
+}	end command block
+;	shell cmd operator
+'	strong quote
+"	weak quote
+<	input redirect
+>	output redirect
+/	pathname dir separator
+?	single char wildcard
+

@@ -1,0 +1,7 @@
+#cmds below 
+#cut -f 1 -d : /etc/passwd
+#sort /etc/passwd
+#cut -f 2 -d : /etc/passwd | sort -n
+#du -h | sort -rn
+#sort -n -k2 -t : /etc/passwd
+

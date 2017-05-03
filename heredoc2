@@ -1,0 +1,11 @@
+#!/bin/bash
+# script that show how text to be sent by wall
+# is feeded through a here doc
+
+wall <<EndOfMessage
+The menu for today is:
+1.	Healthy soup and salad
+2.	Chips and fish
+3.	Steak and carrots
+EndOfMessage
+

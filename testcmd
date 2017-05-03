@@ -1,0 +1,10 @@
+# 	expression	test( ls/etc/hosts )
+#	string		tess -z $1
+#	integers	test $1 = 6
+#	file com	test file1 -nt file2
+#	file prop	test -x file1
+#	test -z $1	internal bash cmd
+#	bash int cmd	[ -z $1 ]
+#	improved v	[[ -z $1 ]]
+#	try single	[  $BLAH =a* ] || echo string does not start with a
+#	try double	[[ $BLAH = a* ]] || echo string does not start with a

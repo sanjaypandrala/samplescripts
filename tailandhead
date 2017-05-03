@@ -1,0 +1,7 @@
+# tail		is used to display the last line
+# head		is used to display the first line
+# tail -2 /etc/passwd
+# head -2 /etc/passwd
+# the below cmd show line number 5
+# head -5 /etc/passwd | tail -1
+

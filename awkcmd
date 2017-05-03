@@ -1,0 +1,6 @@
+# awk -F : '{print $4 }' /etc/passwd
+# awk -F : '/user/ { print $4 } ' /etc/passwd
+# awk -F : '{ print $1,$NF}' /etc/passwd ## $NF will give the last feild($NF is the last feild)
+# awk -F : '$3 > 500' /etc/passwd  ## here $3 corresponds to column number
+# awk -F ; '$NF ~/bash/' /etc/passwd
+

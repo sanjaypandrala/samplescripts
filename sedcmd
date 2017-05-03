@@ -1,0 +1,4 @@
+#	sed -n 5p /etc/passwd
+#	sed -i s/old-text/new-text/g ~/myfile
+#	sed -i -e '2d' ~/myfile
+#	sed -i -e '2d;20,25d' ~/myfile

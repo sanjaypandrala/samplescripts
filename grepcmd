@@ -1,0 +1,8 @@
+#	grep -i		case insensitive
+#	grep -v		exclude lines that match the pattern
+#	grep -r what*	recursive
+#	grep -e 'what' -e 'else' *	matches more reg exp
+#	grep -A5 	shows 5 lines after matching regex
+# 	grep -B4	shows 4 lines before the matching regex
+
+

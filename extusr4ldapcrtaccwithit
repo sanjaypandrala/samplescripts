@@ -1,0 +1,16 @@
+#!/bin/bash
+# to extract user names
+for i in $(cat testldapusers)
+do
+	USER=${i%%,*} && 
+	USER=${USER#*=} &&
+	echo $USER >> usersfromldap
+done
+
+# show that user creation will work
+for j in $( cat usersfromldap )
+do
+	echo useradd $j
+done
+
+exit 0

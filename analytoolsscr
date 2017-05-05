@@ -1,0 +1,6 @@
+# bash syntax highligting
+# vim :set lish to show hidden char if copy pasted and :set nolist to come out of it
+# bash -v to show verbose
+# bash -n to chk for syntax errors
+# bash -x to show xtrace
+# DEBUG trap to show debugg 

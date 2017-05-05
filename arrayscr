@@ -1,0 +1,10 @@
+#!/bin/bash
+#	names=(linda lisa laura lori)
+#	names[0]=linda
+#	names[1]=lisa
+#	names[2]=laura
+#	names[3]=lori
+#	echo ${names[2]}
+#	echo ${names[@]}
+#	echo ${#names[@]}
+

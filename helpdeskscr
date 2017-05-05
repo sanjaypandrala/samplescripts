@@ -1,11 +1,11 @@
 #!/bin/bash
 while true ; do
-trap "echo NOPE INT"
+trap "echo NOPE" INT
 pinghost ()
 {
 	echo which host do you want to ping
 	read HOSTNAME
-	ping $HOSTNAME
+	ping -c 2 $HOSTNAME
 }
 echo 'Select option: '
 select TASK in 'Reset password: ' 'Show disk usage: ' 'Ping a host: '  'Logout: '

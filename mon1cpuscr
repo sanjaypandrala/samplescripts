@@ -1,0 +1,23 @@
+#!/bin/bash
+#INTERVAL=$1
+
+while true # sleep $INTERVAL
+do
+	#EndOfFile
+	sleep 5
+	USAGE1=$(ps -eo pcpu,pid -o comm= | sort -k1 -n -r | head -1 | awk '{print $1} ')
+	USAGE1=${USAGE1%.*}
+	PID1=$(ps -eo pcpu,pid -o comm= | sort -k1 -n -r | head -1 | awk '{print $2 }')
+	PNAME1=$(ps -eo pcpu,pid -o comm= | sort -k1 -n -r | head -1 | awk '{print $3}')
+
+	if [ $USAGE1 -gt 80 ]
+	then
+	sleep 7
+	USAGE2=$(ps -eo pcpu,pid -o comm= | sort -k1 -n -r | head -1 | awk '{ print $1 } ')
+	USAGE2=${USAGE2%.*}
+	PID2=$(ps -eo pcpu,pid -o comm= | sort -k1 -n -r | head -1 | awk ' {print $2}')	
+	PNAME2=$(ps -eo pcpu,pid -o comm= | sort -k1 -n -r | head -1 | awk '{print $3}')
+	[ $USAGE2 -gt 80 ] && [ $PID1 = $PID2 ] && \
+	mail -s " CPU load of $PNAME is above 80" root@192.168.56.105  < .
+	#EndOfFile
+done

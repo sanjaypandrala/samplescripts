@@ -13,7 +13,7 @@ done
 echo "Array indexes:"
 for index in ${!array[*]}
 do
-	printf " %d\n $index
+	printf " %d\n" $index
 done
 
 echo "Array items and indexes:"

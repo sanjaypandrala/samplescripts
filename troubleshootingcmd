@@ -1,0 +1,122 @@
+# uptime
+# top
+# top -b -n 1 | tee top_output
+# sudo iotop
+# /etc/init.d
+# /etc/rcS.d
+# /etc/rc.local
+# sudo initctl list
+# cp /var/log/syslog syslogbackup
+# sudo tune2fs -1 /dev/sda1 | grep -i "block count"  ### when the disk if full
+# cd/    ### track down the largest directories
+# sudo tail /tmp/duck-root  
+# sudo sh -c ">  /var/log/messges"
+# df -i
+# sudo mount -o remount,rw /home
+# fsck -y -C /dev/sda5
+# mke2fs -n /dev/sda5
+# watch -n 5 "cat /proc/mdstat"  ### ctrl -c to exit
+# sudo ethtool eth0
+# sudo ethtool -s eth0 autoneg off duplex full 
+# sudo ifconfig eht0  ### is the interface up
+# sudo ifup eth0
+# sudo route -n ### is it on the local network
+# sudo service networking restart
+# sudo service network restart
+# pinc -c2 10.1.1.1
+# nslookup web1 ############################ is DNS working ###
+# nslookup web1
+# traceroute 10.x.x.x ### can i route to the remote host
+# telnet 10.x.x.x  80 ### is the remote port open
+# nmap -p 80 10.x.x.x
+# sudo netstat -lnp | grep 80 ### test for listening ports
+# sudo /sbin/iptables -L ################### firewall rules
+# sudo /sbin/iptables -L ### chain input
+# sudo /sbin/iptables  -L -n ### chk to block 80
+# dig ; nslookup ; ping ; traceroute ; route ; netstat ; iptables 
+######################packet capturing
+# sudo tcpdump -w output.pcap 
+# sudo tcpdump -n host web1
+# sudo tcpdump -n not host web1
+# sudo tcpdump -n port 53 
+# sudo tcpdump -n -1 host web1 | tee outputfile
+# sudo tcpdump -w output.pcap
+# sudo tcpdump -C 10 -w output.pcap
+# sudo tcpdump -C 10 -W 5 -w output.pcap
+# sudo tcpdump -n -r output.pcap
+############################wireshark
+# tcp.port ==53 || udp.port
+#############################DNS CLIENT TR
+# nslookup web1
+# nslookup web1 10.x.x.x
+##########################ALTERNATIVE
+# dig web1.example.net@10.x.x.xx
+# dig example.net NS
+# dig web1.example.net +trace
+# nslookup www.google.com 10.x.x.x
+# sudo /etc/init.d/nsdc restart
+# sudo /etc/init.d/named restart
+# ps -ef | grep named
+# dig gmail.com MX  ### trace an email req
+# telnet mail.example.net 25
+# postconf smtpd_recipient_restrictions ### outbound mail server 
+# postconf mynetworks
+# grep 1xxxxxxxx  /var/log/mail.log
+# dig gmail.com MX +short 
+# nmap -p 25 gmail-smtp-in.1.example.com
+# nmap -p 25 -PN gmail-smtp-in.l.google.com ###
+# nmap -p 25 -Pn gmail-smtp.in.l.google.com
+# mailq
+# sudo postqueue flush
+# dig example.net MX ####problems receiving email
+# sudo /etc/init.d/postfix status
+# ps -ef | grep postfix
+# sudo netstat -lnp | grep;25
+# sudo egrep 'to=.*info@examp.com' /var/log/mail.log > /tmp/jans_incoming_emails
+# sudo grep xxxxxx /var/log/mail.log
+# sudo egrep 'from=.*xxx.@sdfsd.com' /var/log/mail.log > /tmp/freds_incoming_emails
+# sudo grep "yahoo.com' /var/log/mail.log > /temp/gmail_all_emails 
+# telnet 10.x.x.x 80
+# nmap -p 80 10.x.x.x
+# sudo netstat -lnp | grep:80
+# sudo /sbin/iptables -L
+# sudo /sbin/iptables -L -n
+################### test web server #############
+# curl http://www.example.com
+# curl localhost:80
+# curl -w "{http_code}\n" http://www.example.net
+# curl -w "%{http_code}\n" localhost:80
+# curl -w "%{http_code} %{time_total} %{size_download} \%{content_type}\n" http://www.erere.net
+# telnet www.rere.net 80
+# curl -w "%{http_code}\n" http://www.ererr.com
+# egrep '^10.x.x.x' /var/log/apache2/access.log
+# egrep  '10.1.2.3 ' /var/log/apache2/access.log | wc -1
+# egrep  '^10.1.23.*04\/jul\2012' /var/log/apache2/access.log
+# egrep '^10.1.2.5.*04\/jul\/2012:12' /var/log/apache2/access.log
+# watch -n 5 'curl http://localhsot/server-status?auto' 
+# sudo apache2ctl configtest
+# sudo nginx -t
+# culr http://localhost
+# sudo service mysql status
+# ps -ef | grep mysql
+# sudo netstat -lnp | grep :3306
+# sudo netstat -lnp | grep :5432
+# mysqladmin -u root -p status
+# sudo smartctl -H /dev/sda  
+# sudo smartctl -H /dev/sda
+# sudo ifconfig eth0
+# sudo yum install -y lm_sensors-3.4.0-42xxxx.el7.x86_64
+# sudo sensors-detect
+# sensors
+# 
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+

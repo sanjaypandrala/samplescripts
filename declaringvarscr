@@ -1,0 +1,7 @@
+#!/bin/bash
+#	declare -r var=1 	 ###for read only
+# 	declare -i var=1 	 ### for number
+#	declare -a var   	 ### array
+#	declare -f function_name ### for functions
+# 	declare -x var=1	 ### for export
+

@@ -1,0 +1,12 @@
+#!/bin/bash
+#
+#provide 10 arg or more when running this script
+
+echo "Hello      $1"
+echo "Hello      $2"
+echo "Hello      $10"
+echo "Hello      ${10}"
+
+
+exit
+

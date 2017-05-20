@@ -1,0 +1,41 @@
+#!/bin/bash
+# script that monitors availability of a service
+#
+#####
+# exit code 3: user not provided arguments
+# exit code 4: service is not running 
+#####
+# make sure that service name is provided as an argument
+#
+
+if [ -z $1  ]; 
+then
+	echo you need to provided a service name when starting this service
+	exit 3
+else
+	SERVICE=$1
+fi
+
+# run without stoppping to do the monitoring task
+# verify that $SERVICE is running
+if ps aux | grep $SERVICE | grep -v grep | grep -v servicemon2
+then
+	echo all good
+else
+	echo \$SERVICE could not be found as a process
+	echo make sure that \$SERVICE is running and try again
+	echo the command 'ps aux | grep $SERVICE should show the service up and running'
+	exit 4
+fi
+# monitor $SERVICE
+while ps aux | grep $SERVICE | grep -v grep | grep -v servicemon2
+do
+	sleep 10
+done
+# actions if services is failing
+# assuming that the service process can be started with the service cmd
+
+service $SERVICE start
+logger servicemon: $SERVICE restarted
+mail -s "servicemon: $SERVICE restarted at $(date +%d-%m-5y-%H-%M)" root < .
+

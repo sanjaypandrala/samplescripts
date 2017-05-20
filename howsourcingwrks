@@ -1,0 +1,11 @@
+#!/bin/bash
+#
+#example script to show how sourcing works
+
+. /root/sourceme
+
+echo the value of the variable '$COLOR' is  $COLOR
+
+exit 0
+#put the below content in vim /root/sourceme
+#COLOR=red

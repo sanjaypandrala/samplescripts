@@ -1,0 +1,15 @@
+#!/bin/bash
+# script that show how to make sure that user input is provided
+
+if [  -z $1  ]
+then 
+
+		echo provides filenames
+		read FILENAMES
+else
+		FILENAMES="$@"
+fi
+
+echo the following filenames have been provided: $FILENAMES
+
+

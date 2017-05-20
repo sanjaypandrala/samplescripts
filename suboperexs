@@ -1,0 +1,26 @@
+# ${ VAR:-word }
+# ${ VAR:=word }
+# ${ VAR:?message  }:
+# ${ VAR:offset:length }
+# 
+# DATE=
+# echo DATE
+#
+# echo ${ DATE:-today }
+today
+# echo $DATE
+
+# echo ${DATE:=today }
+today
+# echo $DATE
+today
+#
+# DATE=
+#
+# echo ${DATE:?variable not set}
+-bash: DATE: variable not set
+# echo $DATE
+
+# DATE=(date +%d-%m-%y)
+# echo the day is ${DATE:0:2}
+the day is 05

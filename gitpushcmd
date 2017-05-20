@@ -1,0 +1,13 @@
+cd ~                 #Your home directory
+ssh-keygen -t rsa    #Press enter for all values
+
+
+
+git+ssh://git@github.com/username/reponame.git
+
+https://github.com/username/reponame.git
+
+
+git remote set-url origin git+ssh://git@github.com/username/reponame.git
+
+

@@ -1,0 +1,13 @@
+#!/bin/bash
+HOST='sanj@192.168.56.105'
+USER='sanj'
+PASSWD='password'
+
+ftp -n -v $HOST << EOT
+ascii
+user $USER $PASSWD
+prompt
+cd upload
+ls -la
+bye
+EOT

@@ -1,0 +1,10 @@
+#!/bin/bash
+#
+echo "enter the file name"
+read FILENAME
+cp $FILENAME /home
+
+exit 0
+
+
+

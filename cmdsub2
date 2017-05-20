@@ -1,0 +1,4 @@
+# cd /`uname -r`
+# cd ${uname -r}
+# touch logfile-$(date +%d-%m-%y)
+

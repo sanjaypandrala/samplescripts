@@ -1,0 +1,4 @@
+#	sed -n 5p /etc/passwd	##print line number five
+#	sed -i s/old-text/new-text/g ~/myfile  ##replace oldtext with newtext
+#	sed -i -e '2d' ~/myfile  ## delete line number 2
+#	sed -i -e '2d;20,25d' ~/myfile  ## delete line 2 and from 20 to 25 lines

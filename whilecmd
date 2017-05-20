@@ -1,0 +1,18 @@
+#!/bin/bash
+#
+###	while is executed as long as the condition is true
+#
+###	untill is used to executed as long as condition is false
+#
+# 	while | untill condition
+#	do
+#		command
+#	done
+COUNTER=0
+
+while true
+do
+	sleep 1
+	COUNTER=$((COUNTER + 1 )) 
+	echo $COUNTER  seconds  have passed since starting this script
+done

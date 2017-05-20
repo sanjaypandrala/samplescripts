@@ -1,0 +1,21 @@
+#!/bin/bash
+
+COUNTER=$1
+COUNTER=$(( COUNTER *60  ))
+
+mineen() {
+	COUNTER=$(( COUNTER -1 ))
+	sleep 1
+}
+
+while  [ $COUNTER -gt 0 ]
+do
+	echo you still have $COUNTER seconds
+	mineen
+done
+
+while true
+do
+	echo you are ${COUNTER#*-} seconds late
+	mineen
+done

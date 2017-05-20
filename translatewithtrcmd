@@ -1,0 +1,6 @@
+# tr helps in transforming strings
+
+echo hello | tr[a-z] [A-Z]
+## for foreign languages
+echo hello | tr [:lower:] [:upper:]
+

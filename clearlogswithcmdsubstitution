@@ -1,0 +1,10 @@
+#!/bin/bash
+# this script copies /var/log contents and clears currnet
+# contents of the file
+# usage ./clearlogswithcmdsubstitution
+
+cp /var/log/messages /var/log/messages.$(date +%d-%m-%y ) 
+cat /dev/null > /var/log>messages
+echo log file copied and cleaned up
+
+exit 0

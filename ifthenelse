@@ -1,0 +1,38 @@
+#!/bin/bash
+# usage ./ifthenelse   /etc/passwd on cmd
+#########################
+#	if exp
+#	then
+#		cmd1
+#		cmd2
+#	fi
+##########################
+##########################
+#	if exp
+#	then
+#		cmd1
+#	else  ####### if cond not true     
+#		cmd2
+#	fi
+###########################
+###########################
+# 	if  exp
+#	then
+#		cmd1
+#	elif exp2 
+#	then
+#		cmd2
+#	fi
+############################
+if    [ -d $1 ]
+then
+	echo $1 is a directory
+elif  [ -f $1 ]
+then
+	echo $1 is a file
+else
+	echo $1 is not a file, nor a directory
+fi
+
+
+

@@ -1,0 +1,19 @@
+# ^text 	line starts with text
+# test$ 	line ends with text
+# .		wildcard (matches any single char)
+# [abc], [a-c]	Matches a,b or c
+# *		Matches 0 to an infinite number of the pre
+vious char
+
+# \{2\}		Mathces exactly 2 of the previous char
+# \{1,3\}	Match a minimum of 1 and a max of 3 of the previous char
+# color?r	Match 0 or 1 previous char
+#
+#
+#
+#
+#
+#
+#
+#
+#
